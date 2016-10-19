@@ -1,13 +1,202 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
-.soundBtn {
-	min-width: 300px;
-	margin: 5px;
+div {
+    display: inline-block;
+}
+
+input {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 7px 14px;
+    margin-bottom: 10px
+}
+
+input:focus {
+    outline: none;
+    border-color: #aaa;
+}
+
+.sort:hover {
+    text-decoration: none;
+    background-color: #1b8aba;
+}
+
+.sort:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    content: "";
+    position: relative;
+    top: -10px;
+    right: -5px;
+}
+
+.sort.asc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    content: "";
+    position: relative;
+    top: 13px;
+    right: -5px;
+}
+
+.sort.desc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    content: "";
+    position: relative;
+    top: -10px;
+    right: -5px;
+}
+
+#stop {
+    display: inline-block;
+    background-color: red;
+    width: 200px;
+    height: 50px;
+    font-size: 20pt;
+    margin: 5px auto 5px auto;
+}
+
+.snark {
+    display: block;
+    clear: left;
+}
+
+table.sounds {
+    position: absolute;
+    width: 60%;
+    min-width: 600px;
+    background-color: #fafafa;
+    border: 1px #000000 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr.headerRow {
+    background-color: #99CCCC;
+    border: 1px #000000 solid;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 12px;
+    color: #404040;
+    text-align: left;
+    cursor: default;
+}
+
+td.name {
+    border-bottom: 1px #6699CC solid;
+    text-align: left;
+    font-family: Verdana, sans-serif, Arial;
+    font-weight: normal;
+    font-size: .7em;
+    color: #404040;
+    cursor: default;
+    background-color: #fafafa;
+    padding: 4px 0 4px 0;
+    width: 35%;
+    min-width: 400px;
+}
+
+td.playcount {
+    border-bottom: 1px #6699CC solid;
+}
+
+td.dateadded {
+    border-bottom: 1px #6699CC solid;
+}
+
+.sound-btn {
+    -moz-box-shadow: inset 0 1px 0 0 #ffffff;
+    -webkit-box-shadow: inset 0 1px 0 0 #ffffff;
+    box-shadow: inset 0 1px 0 0 #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #99cccc), color-stop(1, #00b7ff));
+    background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color: #ededed;
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-bottom-left-radius: 6px;
+    text-indent: 0;
+    display: inline-block;
+    color: #000000;
+    font-family: Arial;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-style: normal;
+    height: 3em;
+    line-height: 3em;
+    width: 90%;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sound-btn:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+    background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+    background-color: #dfdfdf;
+}
+
+.sound-btn:active {
+    position: relative;
+    top: 1px;
+}
+
+@media screen and (orientation: portrait) {
+    table.sounds {
+        width: 90%;
+    }
+
+    th.name {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    td.name {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    .playcount {
+        position: absolute;
+        visibility: collapse;
+    }
+
+    .dateadded {
+        position: absolute;
+        visibility: collapse;
+    }
+
+    .sound-btn {
+        font-size: 3em
+    }
 }
