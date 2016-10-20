@@ -8,7 +8,7 @@ var soundFiles = require('./sounds');
 function playSound(fileName){
 	console.log('Trying to play sound');
 	var filePath = path.format({
-		dir: "/home/pi/soundService/sounds",
+		dir: "/home/pi/Github/soundservicePi/sounds",
 		base: fileName
 	});
 	console.log('File name: ' + filePath);
