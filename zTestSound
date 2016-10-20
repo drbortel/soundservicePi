@@ -1,0 +1,8 @@
+# 3 ways to test
+# sudo aplay /usr/share/sounds/alsa/Front_Center.wav
+# mpg321 "/usr/share/sounds/alsa/Front_Center.wav"
+sudo chmod a+rw /dev/vchiq
+# comment for now gives error:
+#  amixer: Control default open error: No such file or directory
+# amixer cset numid=3 1
+omxplayer -o local /usr/share/sounds/alsa/Front_Center.wav

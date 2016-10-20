@@ -1,0 +1,8 @@
+echo "Initialize the driver"
+./zTestSound
+sudo chmod o+rw /dev/snd/controlC0
+sudo chmod o+rw /dev/snd/*
+sudo amixer set PCM -- -100
+cd ./soundService/
+echo "Start the node service.."
+npm start
